@@ -324,7 +324,7 @@ async function lookupAll(
   }
   if (result.notFound.length > 0) {
     throw new InstallError(
-      `No skill named ${result.notFound.map((s) => `"${s}"`).join(', ')} on ClawShelf. Browse https://clawshelf.com/skills`,
+      `No skill named ${result.notFound.map((s) => `"${s}"`).join(', ')} on ClawShelf. If several skills share a name, use the full slug from the skill's page. Browse https://clawshelf.com/skills`,
       1,
       'not_found'
     );
