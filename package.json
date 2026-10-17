@@ -1,0 +1,50 @@
+{
+  "name": "clawshelf",
+  "version": "0.1.0",
+  "description": "Install ClawShelf agent skills into Claude Code, Codex, Cursor, OpenClaw and every other Agent Skills client.",
+  "keywords": [
+    "agent-skills",
+    "skills",
+    "claude-code",
+    "codex",
+    "cursor",
+    "openclaw",
+    "cli"
+  ],
+  "homepage": "https://clawshelf.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billyhetech/clawshelf-cli.git"
+  },
+  "bugs": "https://github.com/billyhetech/clawshelf-cli/issues",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "clawshelf": "dist/index.js",
+    "clawshelf-cli": "dist/index.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "1.8.1",
+    "@napi-rs/keyring": "2.1.0",
+    "fflate": "0.8.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^20.19.0",
+    "tsup": "8.5.1",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.2"
+  }
+}
