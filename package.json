@@ -1,6 +1,6 @@
 {
   "name": "clawshelf",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Install ClawShelf agent skills into Claude Code, Codex, Cursor, OpenClaw and every other Agent Skills client.",
   "keywords": [
     "agent-skills",
